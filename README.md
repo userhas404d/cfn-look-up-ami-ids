@@ -1,5 +1,5 @@
 # cfn-look-up-ami-ids
-Serverless packaged AWS Lambda blueprint to lookup AMI IDs by AMI Name
+[Serverless framework][ServerlessLink] packaged AWS Lambda blueprint to lookup AMI IDs by AMI Name
 
 This blueprint mirrors the blueprint of the same name provide by AWS, with the
 following enhancements:
@@ -12,7 +12,13 @@ to the function
 - Uses a new parameter `AutoUpdateAmi` to enable use of the most recent AMI ID
 on stack update.
 - Improves error logging when the pattern does not match any images
+- deployment as a serverless project
 
+## Deploy with serverless
+
+1. Ensure your environment meets the prerequisites per the [serverless documentation][ServerlessLink]
+2. Clone this repo to your local machine
+3. Navigate to the project directory and run `sls deploy`
 
 ## Lambda Execution Role
 
@@ -130,3 +136,5 @@ property of the instance (or launch configuration).
     }
   }
 ```
+
+[ServerlessLink]:https://serverless.com/framework/docs/providers/aws/guide/quick-start/
