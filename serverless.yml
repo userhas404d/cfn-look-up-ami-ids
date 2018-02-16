@@ -24,8 +24,9 @@ provider:
       Resource: "*"
 
 package:
-  exclude:
-    - LambdaAMILookupTest.template
+  include:
+    - serverless.yml
+    - index.js
 
 # The `functions` block defines what code to deploy
 functions:
