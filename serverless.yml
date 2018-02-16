@@ -24,8 +24,9 @@ provider:
       Resource: "*"
 
 package:
+  exclude:
+    - ./**
   include:
-    - serverless.yml
     - index.js
 
 # The `functions` block defines what code to deploy
