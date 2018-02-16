@@ -23,6 +23,10 @@ provider:
         - "ec2:DescribeImages"
       Resource: "*"
 
+package:
+  exclude:
+    - LambdaAMILookupTest.template
+
 # The `functions` block defines what code to deploy
 functions:
   cfn-look-up-amis-ids:
