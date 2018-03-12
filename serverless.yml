@@ -11,7 +11,7 @@ service: cfn-look-up-amis-ids
 provider:
   name: aws
   runtime: nodejs4.3
-  timeout: 30
+  timeout: 90
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -26,17 +26,9 @@ provider:
 
 package:
   exclude:
-    - ./**
-  include:
-    - index.js
+    - LambdaAMILookupTest.template
 
 # The `functions` block defines what code to deploy
 functions:
   cfn-look-up-amis-ids:
     handler: index.handler
-    # # The `events` block defines how to trigger the handler.helloWorld code
-    # events:
-    #   - http:
-    #       path: hello-world
-    #       method: get
-    #       cors: true
