@@ -11,7 +11,7 @@ service: cfn-look-up-amis-ids
 provider:
   name: aws
   runtime: nodejs4.3
-  timeout: 90
+  timeout: 120
   iamRoleStatements:
     - Effect: "Allow"
       Action:
